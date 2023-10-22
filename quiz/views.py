@@ -7,6 +7,9 @@ from django.contrib import messages
 from django.utils import timezone
 from django.db.models import Count, Sum, F, FloatField, Q, Prefetch
 from django.db.models.functions import Cast
+from rest_framework import generics
+from .models import Quiz, Question, StudentAnswer
+from .serializers import QuizSerializer, QuestionSerializer, StudentAnswerSerializer
 
 
 def quiz(request, code):
@@ -254,3 +257,27 @@ def quizSummary(request, code, quiz_id):
 
     else:
         return redirect('std_login')
+    
+class QuizList(generics.ListCreateAPIView):
+    queryset = Quiz.objects.all()
+    serializer_class = QuizSerializer
+
+class QuizDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Quiz.objects.all()
+    serializer_class = QuizSerializer
+
+class QuestionList(generics.ListCreateAPIView):
+    queryset = Question.objects.all()
+    serializer_class = QuestionSerializer
+
+class QuestionDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Question.objects.all()
+    serializer_class = QuestionSerializer
+
+class StudentAnswerList(generics.ListCreateAPIView):
+    queryset = StudentAnswer.objects.all()
+    serializer_class = StudentAnswerSerializer
+
+class StudentAnswerDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = StudentAnswer.objects.all()
+    serializer_class = StudentAnswerSerializer

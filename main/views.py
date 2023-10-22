@@ -8,9 +8,10 @@ from django.http import HttpResponseRedirect
 from .forms import AnnouncementForm, AssignmentForm, MaterialForm
 from django import forms
 from django.core import validators
-
-
 from django import forms
+from rest_framework import generics
+from .models import Student, Faculty, Department, Course, Announcement, Assignment, Submission, Material
+from .serializers import StudentSerializer, FacultySerializer, DepartmentSerializer, CourseSerializer, AnnouncementSerializer, AssignmentSerializer, SubmissionSerializer, MaterialSerializer
 
 
 class LoginForm(forms.Form):
@@ -733,3 +734,68 @@ def guestFaculty(request):
         return redirect('facultyCourses')
     except:
         return redirect('std_login')
+
+
+class StudentList(generics.ListCreateAPIView):
+    queryset = Student.objects.all()
+    serializer_class = StudentSerializer
+
+class StudentDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Student.objects.all()
+    serializer_class = StudentSerializer
+
+class FacultyList(generics.ListCreateAPIView):
+    queryset = Faculty.objects.all()
+    serializer_class = FacultySerializer
+
+class FacultyDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Faculty.objects.all()
+    serializer_class = FacultySerializer
+
+class DepartmentList(generics.ListCreateAPIView):
+    queryset = Department.objects.all()
+    serializer_class = DepartmentSerializer
+
+class DepartmentDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Department.objects.all()
+    serializer_class = DepartmentSerializer
+
+class CourseList(generics.ListCreateAPIView):
+    queryset = Course.objects.all()
+    serializer_class = CourseSerializer
+
+class CourseDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Course.objects.all()
+    serializer_class = CourseSerializer
+
+class AnnouncementList(generics.ListCreateAPIView):
+    queryset = Announcement.objects.all()
+    serializer_class = AnnouncementSerializer
+
+class AnnouncementDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Announcement.objects.all()
+    serializer_class = AnnouncementSerializer
+
+class AssignmentList(generics.ListCreateAPIView):
+    queryset = Assignment.objects.all()
+    serializer_class = AssignmentSerializer
+
+class AssignmentDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Assignment.objects.all()
+    serializer_class = AssignmentSerializer
+
+class SubmissionList(generics.ListCreateAPIView):
+    queryset = Submission.objects.all()
+    serializer_class = SubmissionSerializer
+
+class SubmissionDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Submission.objects.all()
+    serializer_class = SubmissionSerializer
+
+class MaterialList(generics.ListCreateAPIView):
+    queryset = Material.objects.all()
+    serializer_class = MaterialSerializer
+
+class MaterialDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Material.objects.all()
+    serializer_class = MaterialSerializer

@@ -5,11 +5,9 @@ from django.conf.urls.static import static
 from main import views
 from froala_editor import views as froala_views
 
-
 admin.site.site_header = "Mauá Monitoria"
 admin.site.site_title = "Mauá Monitoria Portal de Administração"
-admin.site.index_title = "Bem vindo ao  Portal de Administração do Mauá Monitoria "
-
+admin.site.index_title = "Bem vindo ao Portal de Administração do Mauá Monitoria"
 
 urlpatterns = [
     path('admin/', admin.site.urls, name='admin'),
@@ -20,4 +18,12 @@ urlpatterns = [
     path('', include('attendance.urls')),
     path('', include('quiz.urls')),
     path('froala_editor/', include('froala_editor.urls')),
+
+    # Add your API URLs here
+    path('api/', include([
+        path('main/', include('main.urls')),
+        path('discussion/', include('discussion.urls')),
+        path('attendance/', include('attendance.urls')),
+        path('quiz/', include('quiz.urls')),
+    ])),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

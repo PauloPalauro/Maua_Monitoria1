@@ -4,13 +4,9 @@ from main.models import Student, Faculty, Course
 from main.views import is_faculty_authorised, is_student_authorised
 from itertools import chain
 from .forms import StudentDiscussionForm, FacultyDiscussionForm
-
-
-# Create your views here.
-
-
-''' We have two different user models.
-    That's why we are filtering the discussions based on the user type and then combining them.'''
+from rest_framework import generics
+from .models import StudentDiscussion, FacultyDiscussion
+from .serializers import StudentDiscussionSerializer, FacultyDiscussionSerializer
 
 
 def context_list(course):
@@ -104,3 +100,20 @@ def send_fac(request, code, fac_id):
             return redirect('discussion', code=code)
     else:
         return render(request, 'std_login.html')
+    
+
+class StudentDiscussionList(generics.ListCreateAPIView):
+    queryset = StudentDiscussion.objects.all()
+    serializer_class = StudentDiscussionSerializer
+
+class StudentDiscussionDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = StudentDiscussion.objects.all()
+    serializer_class = StudentDiscussionSerializer
+
+class FacultyDiscussionList(generics.ListCreateAPIView):
+    queryset = FacultyDiscussion.objects.all()
+    serializer_class = FacultyDiscussionSerializer
+
+class FacultyDiscussionDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = FacultyDiscussion.objects.all()
+    serializer_class = FacultyDiscussionSerializer  

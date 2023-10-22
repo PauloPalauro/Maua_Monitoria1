@@ -3,6 +3,11 @@ from django.shortcuts import render, redirect
 from . models import Attendance
 from main.models import Student, Course, Faculty
 from main.views import is_faculty_authorised
+from rest_framework import generics
+from .models import Attendance
+from .serializers import AttendanceSerializer
+from django.urls import get_resolver
+from django.http import JsonResponse
 
 
 def attendance(request, code):
@@ -77,3 +82,16 @@ def submitAttendance(request, code):
                 return render(request, 'attendance/attendance.html', {'code': code, 'students': students, 'course': course, 'faculty': Faculty.objects.get(course=course)})
         except:
             return render(request, 'attendance/attendance.html', {'code': code, 'error': "Error! could not save", 'students': students, 'course': course, 'faculty': Faculty.objects.get(course=course)})
+
+
+class AttendanceList(generics.ListCreateAPIView):
+    queryset = Attendance.objects.all()
+    serializer_class = AttendanceSerializer
+
+class AttendanceDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Attendance.objects.all()
+    serializer_class = AttendanceSerializer
+
+def debug_urls(request):
+    urlconf = get_resolver()
+    return JsonResponse({'urls': list(urlconf.reverse_dict.keys())})
