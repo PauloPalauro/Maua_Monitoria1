@@ -54,14 +54,14 @@ pip install djongo
 
 6. Vá no MongoDB e crie um novo Database
 
-   MongoDB Compass > New DataBase > Escolha os nommes do DataBase e da Coleção (Serão usados a frente)
+   MongoDB Compass > New DataBase > Escolha os nomes do DataBase e da Coleção (Serão usados a frente)
 
 <br>
 <br>
 
 7. Va no Settings.py e mude o Nome do Database para o nome que você escolheu
 
-    eMLS > settings.py > DATABASES > 'NAME' : 'NOME_DO_SEU_DATABASE'
+    eMLS > settings.py > DATABASES > 'NAME' : 'NOME_DO_SEU_DATABASE' (Nome do DATABASE e não da coleção)
 
 <br>
 <br>
