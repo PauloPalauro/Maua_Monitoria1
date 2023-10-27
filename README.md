@@ -71,7 +71,44 @@ python manage.py createsuperuser
 <br>
 <br>
 
-7. Execute o projeto
+7. Instale o Djongo
+
+```bash
+pip install djongo
+```
+
+<br>
+<br>
+
+8. Vá no MongoDB e crie um novo Database
+
+   MongoDB Compass > New DataBase > Escolha os nommes do DataBase e da Coleção (Serão usados a frente)
+
+<br>
+<br>
+
+9. Va no Settings.py e mude o Nome do Database para o nome que você escolheu
+
+    eMLS > settings.py > DATABASES > 'NAME' : 'NOME_DO_SEU_DATABASE'
+
+<br>
+<br>
+
+10. Instale o pymongo
+
+```bash
+pip install pymongo==3.12.3
+```
+
+<br>
+<br>
+
+11 . Repita o Passo 5 novamente
+
+<br>
+<br>
+
+12 . Execute o projeto
 
 ```bash
 python manage.py runserver
