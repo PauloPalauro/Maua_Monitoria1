@@ -40,10 +40,6 @@
          </div>
          <div>
             <p><span class="material-symbols-outlined inline-icons me-2">
-               groups
-               </span>Estudantes Participantes :  <span class="fw-bold">{{ quiz.attempted_students}}/{{total_students}}</span>
-            </p>
-            <p><span class="material-symbols-outlined inline-icons me-2">
                format_list_numbered
                </span>Total de Questões: <span class="fw-bold"> {{ quiz.total_questions}}</span> 
             </p>
@@ -87,7 +83,7 @@
 </div>
 <div class="container p-3 shadow-sm rounded" id="allmarks">
    <div class="fw-bold">Notas dos Estudantes</div>
-   {% if quiz.attempted_students %}
+   {% if quiz.title %}
 <div class="table-responsive">
    <table class="table text-center table-borderless" style="white-space: nowrap;">
       <thead class="border-bottom">
