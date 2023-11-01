@@ -80,6 +80,8 @@ WSGI_APPLICATION = 'eLMS.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+#Mysql
+
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.mysql',
@@ -89,6 +91,27 @@ WSGI_APPLICATION = 'eLMS.wsgi.application'
 #         'PASSWORD': '',
 #     }
 # }
+
+
+#MongoDb Atlas
+
+# DATABASES = {
+#   'default': {
+#        'ENGINE': 'djongo',
+#        'NAME': 'Monitoria',
+#       'ENFORCE_SCHEMA': False,
+#        'CLIENT': {
+#            'host': 'mongodb+srv://root:dudis1000@clusterpaulo.mbcm2mx.mongodb.net/',
+#            'port': 27017,
+#            'username': 'root',
+#            'password': 'dudis1000',
+#            'authSource': 'admin',
+#            'authMechanism': 'SCRAM-SHA-1',
+#        }
+#    }
+# }
+
+#MongoDB compass
 
 DATABASES = {
     'default': {
