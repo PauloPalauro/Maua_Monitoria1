@@ -19,7 +19,7 @@ cd Maua_Monitoria1
 3. Crie um ambiente virtual e ative-o
 
 ```bash 
-python -m venv env
+python3 -m venv env
 ```
 
 * Windows -
