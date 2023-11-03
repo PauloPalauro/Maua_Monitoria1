@@ -80,7 +80,7 @@ WSGI_APPLICATION = 'eLMS.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-#Mysql
+#  < --- Mysql --->
 
 # DATABASES = {
 #     'default': {
@@ -93,7 +93,7 @@ WSGI_APPLICATION = 'eLMS.wsgi.application'
 # }
 
 
-#MongoDb Atlas
+#  < --- MongoDb Atlas - Reserva --->
 
 # DATABASES = {
 #   'default': {
@@ -111,14 +111,29 @@ WSGI_APPLICATION = 'eLMS.wsgi.application'
 #    }
 # }
 
-#MongoDB compass
+#  < --- MongoDb Atlas - Oficial --->
+
 
 DATABASES = {
-    'default': {
+    'default':{
         'ENGINE': 'djongo',
-        'NAME': 'Monitoria',
+        'NAME':'monitoriaIMT',
+        'ENFORCE_SCHEMA': False,
+        'CLIENT':{
+            'host':'mongodb+srv://monitoria:IMTmonitoria@cluster0.vllcn9z.mongodb.net/?retryWrites=true&w=majority'
+        }
     }
 }
+
+
+#  < --- MongoDB compass --->
+
+# DATABASES = {
+#    'default': {
+#        'ENGINE': 'djongo',
+#        'NAME': 'Monitoria',
+#    }
+#}
 
 
 # Password validation
