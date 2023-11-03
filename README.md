@@ -52,21 +52,7 @@ pip install djongo
 <br>
 <br>
 
-6. Vá no MongoDB e crie um novo Database
-
-   MongoDB Compass > New DataBase > Escolha os nomes do DataBase e da Coleção (Serão usados a frente)
-
-<br>
-<br>
-
-7. Va no Settings.py e mude o Nome do Database para o nome que você escolheu
-
-    eMLS > settings.py > DATABASES > 'NAME' : 'NOME_DO_SEU_DATABASE' (Nome do DATABASE e não da coleção)
-
-<br>
-<br>
-
-8. Instale o pymongo
+6. Instale o pymongo
 
 ```bash
 pip install pymongo==3.12.3
@@ -75,7 +61,7 @@ pip install pymongo==3.12.3
 <br>
 <br>
 
-9. Faça migrações e migre
+7. Faça migrações e migre
 
 ```bash
 python manage.py makemigrations
@@ -87,7 +73,7 @@ python manage.py migrate
 <br>
 <br>
 
-10. Criar administrador/superusuário
+8. Criar administrador/superusuário
 
 ```bash
 python manage.py createsuperuser
@@ -103,7 +89,7 @@ python manage.py createsuperuser
 <br>
 <br>
 
-11 . Execute o projeto
+9 . Execute o projeto
 
 ```bash
 python manage.py runserver
