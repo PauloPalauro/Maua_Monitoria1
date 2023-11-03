@@ -56,7 +56,7 @@
                 var fileType = file["type"];
                 var ValidImageTypes = ["image/gif", "image/jpeg", "image/png"];
                 if ($.inArray(fileType, ValidImageTypes) < 0) {
-                     alert("Please select a valid image file (jpg, jpeg, png, gif).");
+                     alert("Selecione um arquivo de imagem válido (jpg, jpeg, png, gif).");
                      $('#photo').val('');
                      return false;
                 }
