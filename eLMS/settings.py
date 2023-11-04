@@ -134,10 +134,10 @@ WSGI_APPLICATION = 'eLMS.wsgi.application'
 #        'NAME': 'Monitoria',
 #       'ENFORCE_SCHEMA': False,
 #        'CLIENT': {
-#            'host': 'mongodb+srv://root:dudis1000@clusterpaulo.mbcm2mx.mongodb.net/',
+#            'host': 'mongodb+srv://root:***@clusterpaulo.mbcm2mx.mongodb.net/',
 #            'port': 27017,
 #            'username': 'root',
-#            'password': 'dudis1000',
+#            'password': '***',
 #            'authSource': 'admin',
 #            'authMechanism': 'SCRAM-SHA-1',
 #        }
