@@ -20,6 +20,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -52,6 +53,38 @@ REST_FRAMEWORK = {
         'rest_framework.renderers.JSONRenderer',
         'rest_framework.renderers.BrowsableAPIRenderer',
     ],
+}
+
+JAZZMIN_UI_TWEAKS = {
+    "theme": "darkly",
+}
+
+JAZZMIN_SETTINGS = {
+    "site_header": "Monitoria",
+    "site_brand": "Monitoria",
+    "site_logo": "images/logo_maua.png",
+    "login_logo": "images/logo_maua_2.png",
+    "welcome_sign": "Bem vindo ao Perfil Administrativo",
+    "copyright": "Mauá Monitoria",
+    "changeform_format": "collapsible",
+    
+    
+    "icons": {
+        "auth": "",
+        "attendance.attendance" : "fas fa-clock",
+        "auth.user": "fas fa-user",
+        "auth.Group": "fas fa-users",
+        "main.announcement": "fas fa-bullhorn",
+        "main.assignment" : "fas fa-book-open",
+        "main.course" : "fas fa-chalkboard-teacher",
+        "main.department" : "fas fa-school",
+        "main.faculty" : "fas fa-glasses",
+        "main.material" : "fas fa-users-cog",
+        "main.student" : "fas  fa-user-graduate",
+        "quiz.question" : "fas fas fa-stream",
+        "quiz.quiz" : "fas  fa-file-alt",
+        "quiz.studentanswer" : "fas fa-address-book",
+    },  
 }
 
 ROOT_URLCONF = 'eLMS.urls'
