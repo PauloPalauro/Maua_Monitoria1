@@ -12,7 +12,7 @@ class StudentDiscussionForm(forms.ModelForm):
         model = StudentDiscussion
         fields = ['content']
         widgets = {
-            'content': forms.TextInput(attrs={'class': 'form-control', 'id': 'content', 'name': 'content', 'placeholder': 'Write message...', 'type': 'text'}),
+            'content': forms.TextInput(attrs={'class': 'form-control', 'id': 'content', 'name': 'content', 'placeholder': 'Escreva uma mensagem...', 'type': 'text'}),
         }
 
 
@@ -26,5 +26,5 @@ class FacultyDiscussionForm(forms.ModelForm):
         model = FacultyDiscussion
         fields = ['content']
         widgets = {
-            'content': forms.TextInput(attrs={'class': 'form-control', 'id': 'content', 'name': 'content', 'placeholder': 'Write message...', 'type': 'text'}),
+            'content': forms.TextInput(attrs={'class': 'form-control', 'id': 'content', 'name': 'content', 'placeholder': 'Escreva uma mensagem...', 'type': 'text'}),
         }
