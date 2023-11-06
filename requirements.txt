@@ -5,8 +5,10 @@ django-cleanup==6.0.0
 django-froala-editor==4.0.14
 Pillow==9.4.0
 pycodestyle==2.8.0
-sqlparse==0.4.2
+sqlparse
 toml==0.10.2
 tzdata==2022.1
 djangorestframework==3.13.0
 django-jazzmin==2.6.0
+djongo
+pymongo
