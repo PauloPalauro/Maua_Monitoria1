@@ -11,4 +11,4 @@ tzdata==2022.1
 djangorestframework==3.13.0
 django-jazzmin==2.6.0
 djongo
-pymongo
+pymongo==3.12.3
