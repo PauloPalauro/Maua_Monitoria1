@@ -34,20 +34,36 @@
                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                   <li class="nav-item">
                      <a class="nav-link active fw-bold" aria-current="page" href="{% block courses %}{% endblock courses %}"
-                        data-bs-toggle="tooltip" data-bs-placement="bottom" title="Course home page">Inicio</a>
+                        data-bs-toggle="tooltip" data-bs-placement="bottom" title="Inicio"
+                        style="color: white;"
+                        onmouseover="this.style.color='grey'; this.style.textDecoration='none';"
+                        onmouseout="this.style.color='white'; this.style.textDecoration='none';"
+                        >Inicio</a>
                   </li>
                   <li class="nav-item">
                      <a class="nav-link active fw-bold" aria-current="page" href="/departments"
-                        data-bs-toggle="tooltip" data-bs-placement="bottom" title="Course home page">Departamentos</a>
+                        data-bs-toggle="tooltip" data-bs-placement="bottom" title="Departamentos"
+                        style="color: white;"
+                        onmouseover="this.style.color='grey'; this.style.textDecoration='none';"
+                        onmouseout="this.style.color='white'; this.style.textDecoration='none';" 
+                        >Departamentos</a>
                   </li>
                   <li class="nav-item">
                      <a class="nav-link active fw-bold" href="{% block allCourses %}{% endblock %}" data-bs-toggle="tooltip"
-                        data-bs-placement="bottom" title="Show all courses">Cursos</a>
+                        data-bs-placement="bottom" title="Cursos"
+                        style="color: white;"
+                        onmouseover="this.style.color='grey'; this.style.textDecoration='none';"
+                        onmouseout="this.style.color='white'; this.style.textDecoration='none';"
+                        >Cursos</a>
                   </li>
                   <li class="nav-item">
                      <a class="nav-link active fw-bold" href="{% block profile %}{% endblock profile %}"
                         data-bs-toggle="tooltip" data-bs-placement="bottom"
-                        title="Check your profile">{% block user %}{% endblock  %}</a>
+                        title="Perfil"
+                        style="color: white;"
+                        onmouseover="this.style.color='grey'; this.style.textDecoration='none';"
+                        onmouseout="this.style.color='white'; this.style.textDecoration='none';"
+                        >Perfil: {% block user %}{% endblock  %}</a>
                   </li>               
                </ul>
                <form class="d-flex" action=" {% url 'search' %}" method="GET" st>
@@ -58,7 +74,11 @@
 
                <li class="nav-item">
                   <a class="nav-link active fw-bold" href="{% url 'std_logout' %}" data-bs-toggle="tooltip"
-                     data-bs-placement="bottom" title="Log out">Sair⠀⠀</a>
+                     data-bs-placement="bottom" title="Log out"
+                     style="color: white;"
+                     onmouseover="this.style.color='grey'; this.style.textDecoration='none';"
+                     onmouseout="this.style.color='white'; this.style.textDecoration='none';"
+                     >⠀Sair⠀⠀⠀</a>
                </li>
             </div>
             <div vw class="enabled">
