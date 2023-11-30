@@ -147,3 +147,43 @@ Agora o projeto deve estar rodando em http://127.0.0.1:8000/
 
 6. Aproveite e faça seus testes.
 
+
+## AWS EC2
+
+python3 manage.py runserver 0.0.0.0:8000
+
+<br>
+<br>
+
+Exibir todos os screens
+screen -list
+
+<br>
+<br>
+
+Criar screen com um nome
+screen -S nome-do-screen
+
+<br>
+<br>
+
+Reconectar ao screen
+screen -r nome-do-screen
+
+<br>
+<br>
+
+Encerrar screen
+screen -X -S nome-do-screen quit
+
+<br>
+<br>
+
+Sair do screen
+ctrl-A + d
+
+<br>
+<br>
+
+Redirecionar a porta 80 para a porta 8080
+sudo /sbin/iptables -t nat -I PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8000
