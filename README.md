@@ -164,21 +164,21 @@ screen -list
 
 Criar screen com um nome
 <br>
-screen -S nome-do-screen
+screen -S monitoria
 
 <br>
 <br>
 
 Reconectar ao screen
 <br>
-screen -r nome-do-screen
+screen -r monitoria
 
 <br>
 <br>
 
 Encerrar screen
 <br>
-screen -X -S nome-do-screen quit
+screen -X -S monitoria
 
 <br>
 <br>
