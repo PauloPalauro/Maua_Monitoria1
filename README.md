@@ -156,34 +156,40 @@ python3 manage.py runserver 0.0.0.0:8000
 <br>
 
 Exibir todos os screens
+<br>
 screen -list
 
 <br>
 <br>
 
 Criar screen com um nome
+<br>
 screen -S nome-do-screen
 
 <br>
 <br>
 
 Reconectar ao screen
+<br>
 screen -r nome-do-screen
 
 <br>
 <br>
 
 Encerrar screen
+<br>
 screen -X -S nome-do-screen quit
 
 <br>
 <br>
 
 Sair do screen
+<br>
 ctrl-A + d
 
 <br>
 <br>
 
 Redirecionar a porta 80 para a porta 8080
+<br>
 sudo /sbin/iptables -t nat -I PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8000
