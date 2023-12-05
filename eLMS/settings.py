@@ -69,6 +69,14 @@ JAZZMIN_SETTINGS = {
     "changeform_format": "collapsible",
     
     
+    
+     "topmenu_links": [
+
+        # Url that gets reversed (Permissions can be added)
+        {"name": "Cadastro CSV",  "url": "https://mauabr-my.sharepoint.com/:f:/g/personal/22_01228-0_maua_br/EodTt_0uDwhEgD5NJkE6nNAB6unz_KumeAGEqefiVvPmOg?e=Jn8KO2", "permissions": ["auth.view_user"], "new_window": True},
+    ],
+
+    
     "icons": {
         "auth": "",
         "attendance.attendance" : "fas fa-clock",
@@ -86,6 +94,8 @@ JAZZMIN_SETTINGS = {
         "quiz.studentanswer" : "fas fa-address-book",
     },  
 }
+
+JAZZMIN_SETTINGS["show_ui_builder"] = True
 
 ROOT_URLCONF = 'eLMS.urls'
 
