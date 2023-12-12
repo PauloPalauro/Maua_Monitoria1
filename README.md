@@ -142,8 +142,8 @@ Agora o projeto deve estar rodando em http://127.0.0.1:8000/
 
 # Imagens
 
-<img src="https://i.imgur.com/8MInMsf.png" width="500" alt="maua monitoria" /> <img src="https://i.imgur.com/4ZXlOBq.png" width="500" alt="maua monitoria" />
-<img src="https://i.imgur.com/cwhXc6Y.png" width="500" alt="maua monitoria" /> <img src="https://i.imgur.com/Jvj6SUG.png" width="500" alt="maua monitoria" />
+<img src="https://i.imgur.com/8MInMsf.png" width="400" alt="maua monitoria" /> <img src="https://i.imgur.com/4ZXlOBq.png" width="400" alt="maua monitoria" />
+<img src="https://i.imgur.com/cwhXc6Y.png" width="400" alt="maua monitoria" /> <img src="https://i.imgur.com/Jvj6SUG.png" width="400" alt="maua monitoria" />
 
 <br>
 
