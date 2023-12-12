@@ -28,10 +28,16 @@ Com esta iniciativa pretendemos não só satisfazer os requisitos académicos, m
 
 Para começar a utilizar nosso projeto, siga estas simples etapas de instalação:
 
+<br>
+
+<p align="left">
 1. Clone o projeto
+  
 ```bash
 git clone https://github.com/PauloEduardoPalauro/Maua_Monitoria1
 ```
+</p>
+
 <br>
 2. Vá para o diretório do projeto
 
