@@ -12,6 +12,8 @@ Bem-vindo ao repositório do nosso Projeto Integrador do IMT **(Instituto Mauá 
 
 Com esta iniciativa pretendemos não só satisfazer os requisitos académicos, mas também criar soluções práticas e aplicáveis ​​que reflitam o compromisso da nossa instituição com a melhoria contínua dos seus processos educativos.
 
+Documentação do Projeto - [Documentation - Maua Monitoria](https://github.com/PauloEduardoPalauro/Maua_Monitoria1/blob/main/documentation/Documenta%C3%A7%C3%A3o%20-%20PI%20Monitoria%20-%20Maua%20Monitoria.pdf)
+
 <br>
 
 # Tech Stack
